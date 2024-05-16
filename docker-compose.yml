@@ -1,0 +1,28 @@
+services:
+
+  database:
+    image: postgres:${POSTGRES_VERSION:-16}-bookworm
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      POSTGRES_USER: ${POSTGRES_USER:-usr}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+    volumes:
+      - database_data:/var/lib/postgresql/data:rw,delegated
+      # if you develop on Linux, you may use a bind-mounted host directory instead
+      # - /opt/postgres:/var/lib/postgresql/data:rw,delegated
+
+  webapp:
+    build:
+      context: .
+      target: webapp
+    environment:
+      PHP_OPCACHE__ENABLE: 0
+      PHP_OPCACHE__ENABLE_CLI: 0
+      PHP_XDEBUG__MODE: debug
+    volumes:
+      - ./:/var/www:rw,delegated
+    ports:
+      - 8080:8080
+
+volumes:
+  database_data:
