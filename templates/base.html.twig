@@ -16,120 +16,12 @@
 <body>
 {% block body %}
     {% block navbar %}
-        <div data-bs-theme="dark">
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-purple-gradients">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <img class="rounded-circle" src="{{ asset('build/images/logo-small.png') }}"
-                             height="50" alt="logo">
-                        {{ 'AArtIntelligent' }}
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse d-lg-block" id="navbarCollapse">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item nav-item-menu mx-1">
-                                <a class="nav-link nav-link-b active" aria-current="page"
-                                   href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'overview' }}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-1">
-                                <a class="nav-link nav-link-b" href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'solutions' }}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-1">
-                                <a class="nav-link nav-link-b" href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'enterprise' }}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-1">
-                                <a class="nav-link nav-link-b" href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'docs' }}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-1">
-                                <a class="nav-link nav-link-b" href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'tutorials' }}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-1">
-                                <a class="nav-link nav-link-b" href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'community' }}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-1">
-                                <a class="nav-link nav-link-b" href="#">
-                                    <span class="text-capitalize">
-                                        {{ 'account' }}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
     {% endblock %}
     {% block header %}
-        <header class="masthead">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="container text-center text-white">
-                        <img class="img-fluid" src="{{ asset('build/images/logo-big.png') }}"
-                             height="500" width="500" alt="logo">
-                        <h1 class="mt-5 fw-bold display-5">Lorem Ipsum</h1>
-                        <p class="fs-4">Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-        </header>
     {% endblock %}
     {% block main %}
     {% endblock %}
     {% block footer %}
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <p class="text-center text-body-secondary my-auto">
-                    <span class="text-capitalize">
-                        &#9400;
-                        {{ ' 2024 AArtIntelligent' }}
-                    </span>
-                </p>
-                <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary">
-                            <span class="mx-1 text-capitalize">
-                                {{ 'support' }}
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary">
-                            <span class="mx-1 text-capitalize">
-                                {{ 'contact' }}
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </footer>
-        </div>
     {% endblock %}
 {% endblock %}
 </body>
